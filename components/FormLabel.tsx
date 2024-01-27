@@ -6,14 +6,14 @@ export interface FormLabelProps {
   children?: ReactNode;
 }
 
-const FormLabel = ({ label }: FormLabelProps) => {
+const FormLabel = ({ label, children }: FormLabelProps) => {
   return (
     <label
       id={camelCase(label)}
       htmlFor={camelCase(label)}
-      className="text-lg font-semibold leading-tight cursor-pointer"
+      className="text-lg font-semibold leading-tight cursor-pointer me-4"
     >
-      {label}
+      {children}
     </label>
   );
 };

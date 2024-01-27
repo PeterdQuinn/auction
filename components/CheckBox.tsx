@@ -12,17 +12,16 @@ const CheckBox = ({ label }: CheckBoxProps) => {
   return (
     <div className="form-control">
       <FormLabel label={label} />
-      <label className="label cursor-pointer">
-        <span className="label-text">{label}</span>
-        <input
-          id={camelCase(label)}
-          type="checkbox"
-          checked={check}
-          className="checkbox"
-          /* if checkbox state change is needed, handle such event */
-          onChange={() => setCheck(!check)}
-        />
-      </label>
+
+      <span className="label-text">{label}</span>
+      <input
+        id={camelCase(label)}
+        type="checkbox"
+        checked={check}
+        className="checkbox"
+        /* if checkbox state change is needed, handle such event */
+        onChange={() => setCheck(!check)}
+      />
     </div>
   );
 };

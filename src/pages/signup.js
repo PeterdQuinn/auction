@@ -14,7 +14,7 @@ const signUp = () => {
     // Place your API call here to submit your payload.
   };
   return (
-    <section className="bg-black">
+    <section className="bg-indigo-600">
       <div className="mx-auto flex justify-center lg:items-center h-full flex-col">
         <h2 className="text-4xl leading-tight pt-8">The Auction</h2>
         <h3 className="text-2xl sm:text-3xl xl:text-2xl font-bold leading-tight my-4">

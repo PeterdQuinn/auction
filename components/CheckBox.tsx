@@ -10,19 +10,16 @@ const CheckBox = ({ label }: CheckBoxProps) => {
   const [check, setCheck] = useState<boolean>(false);
 
   return (
-    <div className="form-control">
-      <FormLabel label={label} />
-
-      <span className="label-text">{label}</span>
+    <FormLabel label={label}>
       <input
-        id={camelCase(label)}
-        type="checkbox"
+        className="checkbox checkbox-secondary"
         checked={check}
-        className="checkbox"
+        id={camelCase(label)}
         /* if checkbox state change is needed, handle such event */
         onChange={() => setCheck(!check)}
+        type="checkbox"
       />
-    </div>
+    </FormLabel>
   );
 };
 

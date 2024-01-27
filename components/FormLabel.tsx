@@ -11,7 +11,7 @@ const FormLabel = ({ label, children }: FormLabelProps) => {
     <label
       id={camelCase(label)}
       htmlFor={camelCase(label)}
-      className="text-lg font-semibold leading-tight cursor-pointer me-4"
+      className="text-lg font-semibold leading-tight cursor-pointer me-4 flex gap-4 align-middle"
     >
       {label}
       {children}

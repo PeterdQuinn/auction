@@ -1,24 +1,23 @@
-import React from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 import FormLabel from './FormLabel';
 import camelCase from 'camelcase';
 
-export interface TextInputProps {
-  autocomplete?: string;
+// Cpncept o frest props based on:https://mortenbarklund.com/blog/react-typescript-props-spread/
+export interface TextInputProps extends ComponentPropsWithoutRef<'input'> {
   label: string;
-  type: string;
+  autocomplete?: string;
+  type: 'text' | 'password' | 'email';
 }
 
-const TextInout = ({ autocomplete, label, type }: TextInputProps) => {
+const TextInout = ({ label, ...rest }: TextInputProps) => {
   return (
     <>
       <FormLabel label={label} />
       <input
-        autoComplete={autocomplete}
         className="input w-full max-w-xs"
         id={camelCase(label)}
         name={camelCase(label)}
-        type={type}
-        required
+        {...rest}
       />
     </>
   );

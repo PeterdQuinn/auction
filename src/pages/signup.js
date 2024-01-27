@@ -30,7 +30,7 @@ const signUp = () => {
           <TextInput label="Last Name" type="text" />
           <TextInput label="Email" type="email" autocomplete="on" />
           <TextInput label="Password" type="password" />
-          <CheckBox label="Forgot Password?" />
+          <CheckBox label="Remember Password?" />
           <div className="px-2 sm:px-6">
             <Button label="Login" />
             <p className="mt-16 text-xs text-center">

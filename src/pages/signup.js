@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import TextInput from '../../components/TextInput';
 import CheckBox from '../../components/CheckBox';
+import Button from '../../components/Button';
 const signUp = () => {
   let form = useRef(null);
   const handleSubmit = (event) => {
@@ -31,9 +32,7 @@ const signUp = () => {
           <TextInput label="Password" type="password" />
           <CheckBox label="Forgot Password?" />
           <div className="px-2 sm:px-6">
-            <button className="focus:outline-none w-full bg-white transition duration-150 ease-in-out hover:bg-gray-200 rounded text-indigo-600 px-8 py-3 text-sm mt-6">
-              Login
-            </button>
+            <Button label="Login" />
             <p className="mt-16 text-xs text-center">
               Don’t Have An Account?{' '}
               <a className="underline" href="javascript: void(0)">

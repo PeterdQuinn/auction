@@ -1,10 +1,10 @@
 import camelCase from 'camelcase';
 
-export interface FormLabelProps {
+export interface ButtonProps {
   label: string;
 }
 
-const Button = ({ label }: FormLabelProps) => {
-  return <button className="btn btn-secondary">{label}</button>;
+const Button = ({ label }: ButtonProps) => {
+  return <button className="btn btn-info">{label}</button>;
 };
 export default Button;

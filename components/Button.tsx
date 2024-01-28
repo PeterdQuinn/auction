@@ -3,7 +3,7 @@ import camelCase from 'camelcase';
 export interface ButtonProps {
   label: string;
   color: 'neutral' | 'primary' | 'secondary' | 'accent' | 'ghost';
-  isWide: boolean;
+  isWide?: boolean;
 }
 
 const Button = ({ label, color }: ButtonProps) => {

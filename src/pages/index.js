@@ -5,6 +5,8 @@ import Hero from '../../components/Hero';
 import { Logo } from '../../components/Logo';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
+import Carousel from '../../components/Carousel';
+import CarouselItem from '../../CarouselItem';
 
 const shoes = [
   {
@@ -77,6 +79,17 @@ export default function Home() {
             <Card {...shoe} key={shoe.id} title={shoe.name} />
           ))}
         </div>
+      </div>
+
+      <div className="container mx-auto my-8">
+        <h2>Search By Model</h2>
+        <Carousel>
+          {shoes.map((shoe) => (
+            <CarouselItem key={shoe.id} id={shoe.id}>
+              <Card {...shoe} key={shoe.id} title={shoe.name} />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </div>
     </>
   );

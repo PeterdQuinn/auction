@@ -6,7 +6,7 @@ interface CardProps {
 
 export const Card = ({ title, description, id }: CardProps) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl" id="id">
+    <div className="card w-96 bg-base-100 shadow-xl" id={id}>
       <figure>
         <img
           src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"

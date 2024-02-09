@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
-import Hero from '../../components/Hero';
-import { Logo } from '../../components/Logo';
-import Button from '../../components/Button';
-import Card from '../../components/Card';
-import Carousel from '../../components/Carousel';
+import Hero from '@/components/Hero';
+import { Logo } from '@/components/Logo';
+import Button from '@/components/Button';
+import Card from '@/components/Card';
+import Carousel from '@/components/Carousel';
 import CarouselItem from '../../CarouselItem';
 
 const shoes = [
@@ -63,14 +63,14 @@ export default function Home() {
     <>
       <div>
         <Hero>
-          <Logo />
+          <Logo width="40" />
           <h1 className="mb-5 text-5xl font-bold">Get Bidding</h1>
-          <p className="mb-5">
+          <p className="mb-5 text-pri">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <Button label="Get Started" color="primary" />
+          <Button label="Get Started" color="secondary" />
         </Hero>
       </div>
       <div className="container mx-auto my-8">

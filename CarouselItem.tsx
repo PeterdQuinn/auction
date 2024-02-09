@@ -1,14 +1,13 @@
 import React, { ReactNode } from 'react';
 
 interface CarouselItemProps {
-  id: string;
-  key: string;
+  id?: string;
   children: ReactNode;
 }
 
-export const CarouselItem = ({ id, children, key }: CarouselItemProps) => {
+export const CarouselItem = ({ id, children }: CarouselItemProps) => {
   return (
-    <div className="carousel-item" key={key}>
+    <div className="carousel-item mx-4" id={id}>
       {children}
     </div>
   );

@@ -6,7 +6,8 @@ export interface ButtonProps {
   isWide?: boolean;
 }
 
-const Button = ({ label, color }: ButtonProps) => {
-  return <button className={`btn btn-{color} btn-wide`}>{label}</button>;
+const Button = ({ label, color, isWide }: ButtonProps) => {
+  const buttonClasses = `btn btn-${color}${isWide ? ' btn-wide' : ''}`;
+  return <button className={buttonClasses}>{label}</button>;
 };
 export default Button;

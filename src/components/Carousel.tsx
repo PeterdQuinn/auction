@@ -7,7 +7,7 @@ interface CarouselProps {
 
 export const Carousel = ({ children }: CarouselProps) => {
   return (
-    <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+    <div className="carousel carousel-center max-w-full p-4 space-x-4 bg-neutral rounded-box overflow-hidden">
       {children}
     </div>
   );

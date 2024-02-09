@@ -9,7 +9,7 @@ export interface TextInputProps extends ComponentPropsWithoutRef<'input'> {
   type: 'text' | 'password' | 'email';
 }
 
-const TextInout = ({ label, ...rest }: TextInputProps) => {
+const TextInput = ({ label, ...rest }: TextInputProps) => {
   return (
     <>
       <FormLabel label={label} />
@@ -22,4 +22,4 @@ const TextInout = ({ label, ...rest }: TextInputProps) => {
     </>
   );
 };
-export default TextInout;
+export default TextInput;

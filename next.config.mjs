@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
+
+import {pluginoptions} from "@mightymeld/runtime";
+
 const nextConfig = {
-  reactStrictMode: true,
+  experimental: {
+    swcPlugins: [['@mightymeld/runtime/swc-plugin-mightymeld', pluginoptions()]]
+  },
 };
 
-export default nextConfig;
+export default  process.env.MIGHTYMELD ? nextConfig : {};
+
+

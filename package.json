@@ -10,6 +10,7 @@
     "mightymeld": "set BROWSER=chrome&& npx mightymeld"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "camelcase": "^8.0.0",
     "cors": "^2.8.5",
     "eslint-config-prettier": "^9.1.0",

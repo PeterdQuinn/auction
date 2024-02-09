@@ -74,7 +74,7 @@ export default function Home() {
         </Hero>
       </div>
       <div className="container mx-auto my-8">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1  gap-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {shoes.map((shoe) => (
             <Card {...shoe} key={shoe.id} title={shoe.name} />
           ))}
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto my-8">
-        <h2>Search By Model</h2>
+        <h2 className="text-size-h2">Search By Model</h2>
         <Carousel>
           {shoes.map((shoe) => (
             <CarouselItem key={shoe.id} id={shoe.id}>

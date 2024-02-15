@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Drawer, Menu, Navbar, Button } from 'react-daisyui';
-
+import { Logo } from '@/components/Logo';
 const dashboard = ({ children }) => {
   const [visible, setVisible] = useState(false);
   const toggleVisible = useCallback(() => {
@@ -25,12 +25,7 @@ const dashboard = ({ children }) => {
       >
         <Navbar className="w-full bg-base-300">
           <div className="flex-none lg:hidden">
-            {children}
-            <Button
-              shape="square"
-              color="ghost"
-              onClick={toggleVisible}
-            ></Button>
+            <Logo />
           </div>
           <p className="flex-1 px-2 mx-2">Auction</p>
           <div className="flex-none hidden lg:block">

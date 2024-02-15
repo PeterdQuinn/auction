@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import TextInput from '../../components/TextInput';
-import CheckBox from '../../components/CheckBox';
-import Button from '../../components/Button';
+import TextInput from '@/components/TextInput';
+import CheckBox from '@/components/CheckBox';
+import Button from '@/components/Button';
 
 const login = () => {
   return (

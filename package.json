@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "mighymeld": "npx mightymeld",
+    "mightymeld": "npx mightymeld",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -22,11 +22,12 @@
     "next": "14.1.0",
     "prettier": "^3.2.4",
     "react": "^18",
+    "react-countdown": "^2.3.5",
     "react-daisyui": "^5.0.0",
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@mightymeld/runtime": "^0.1.47",
+    "@mightymeld/runtime": "^0.1.48",
     "@storybook/addon-essentials": "^7.6.15",
     "@storybook/addon-interactions": "^7.6.15",
     "@storybook/addon-links": "^7.6.15",

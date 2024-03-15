@@ -1,14 +1,13 @@
-import { Countdown } from 'react-daisyui';
 import { useEffect, useState } from 'react';
+import { Countdown } from 'react-daisyui';
 
 interface TimerProps {}
-
+const countdownValue = 37;
 export const Timer = ({}: TimerProps) => {
-  const [value, setValue] = useState<number>(args.value);
+  const [value, setValue] = useState<number>(countdownValue);
   useEffect(() => {
     const timer = setTimeout(() => {
-      // @ts-ignore
-      setValue((v) => (v <= 0 ? args.value : v - 1));
+      setValue((v) => (v <= 0 ? countdownValue : v - 1));
     }, 1000);
     return () => {
       clearTimeout(timer);
@@ -29,7 +28,7 @@ export const Timer = ({}: TimerProps) => {
         min
       </div>
       <div className="flex flex-col">
-        <Countdown className="font-mono text-5xl" value={60} />
+        <Countdown className="font-mono text-5xl" value={countdownValue} />
         sec
       </div>
     </div>

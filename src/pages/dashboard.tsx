@@ -2,8 +2,24 @@ import DashboardDrawer from '@/components/Drawer';
 import { Avatar } from 'react-daisyui';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import Timer from '@/components/Timer';
+import Countdown from 'react-countdown';
 
 const dashboard = () => {
+  const Completionist = () => <span>You are good to go!</span>;
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {hours}:{minutes}:{seconds}
+        </span>
+      );
+    }
+  };
   return (
     <DashboardDrawer>
       <div className="container mx-auto m-8">
@@ -70,7 +86,12 @@ const dashboard = () => {
             <div className="flex place-content-evenly bg-neutral-100 rounded my-4 p-2">
               <div>
                 <ul className="list-none prose">
-                  <li>10d 12hrs</li>
+                  <li>
+                    <Countdown
+                      date={Date.now() + 20000000}
+                      renderer={renderer}
+                    />
+                  </li>
                   <li className="font-bold">Time Left</li>
                 </ul>
               </div>

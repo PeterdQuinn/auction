@@ -4,12 +4,10 @@ import { Button, Drawer, Menu, Navbar } from 'react-daisyui';
 
 interface DashboardDrawerProps {
   children?: ReactNode;
-  title: string;
 }
 
-const DashboardDrawer = ({ children, title }: DashboardDrawerProps) => {
+const DashboardDrawer = ({ children }: DashboardDrawerProps) => {
   const [visible, setVisible] = useState(false);
-
   const toggleVisible = useCallback(() => {
     setVisible((visible) => !visible);
   }, []);
@@ -29,7 +27,7 @@ const DashboardDrawer = ({ children, title }: DashboardDrawerProps) => {
       }
     >
       <Navbar className="w-full bg-base-300">
-        <div className="flex-none lg:hidden">
+        <div className="flex-none sm:hidden">
           <Button shape="square" color="ghost" onClick={toggleVisible}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +44,7 @@ const DashboardDrawer = ({ children, title }: DashboardDrawerProps) => {
             </svg>
           </Button>
         </div>
-        <Logo width="20" />
-        <div className="flex-1 px-2 mx-2">{title}</div>
+        <div className="flex-1 px-2 mx-2">Navbar Title</div>
         <div className="flex-none hidden lg:block">
           <Menu horizontal={true}>
             <Menu.Item>
@@ -59,9 +56,7 @@ const DashboardDrawer = ({ children, title }: DashboardDrawerProps) => {
           </Menu>
         </div>
       </Navbar>
-      <div className="flex flex-grow items-center justify-center">
-        {children}
-      </div>
+      {children}
     </Drawer>
   );
 };
